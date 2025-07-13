@@ -1,0 +1,31 @@
+{
+  "name": "gh-push-env",
+  "version": "1.0.0",
+  "description": "Push GitHub secrets and variables using Octokit",
+  "bin": {
+    "gh-push-env": "dist/index.js"
+  },
+  "keywords": [
+    "github",
+    "cli",
+    "secrets",
+    "variables",
+    "octokit"
+  ],
+  "author": "Anggit M Ginanjar",
+  "license": "MIT",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.0",
+    "dotenv": "^17.2.0",
+    "libsodium-wrappers": "^0.7.15"
+  }
+}
