@@ -36,6 +36,10 @@ npm install -g gh-push-vars # Optional global install
 
 ```bash
 gh-push-vars
+
+# With custom env file path
+gh-push-vars --env-file=.env.local
+gh-push-vars -e .env.local
 ```
 
 The script will:
@@ -120,6 +124,7 @@ chmod +x dist/index.js
 - [x] Repo secrets support
 - [x] Repo variables support
 - [x] Name normalization to lowercase
+- [x] Add support for custom `env` file option
 - [ ] Publish the package to NPM
 - [ ] Environment-level secrets/variables (`GH_ENV_SECRET_` / `GH_ENV_VAR_`)
 - [ ] `--dry-run` preview mode
