@@ -2,6 +2,8 @@
 
 Push secrets and variables from your `.env` file to your **GitHub repository** using the GitHub REST API — without the need for GitHub CLI.
 
+> I was tired of manually adding GitHub Actions secrets and variables, so I built this tool to automate the process for personal use. 😞
+
 ---
 
 ## 🚀 Features
