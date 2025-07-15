@@ -90,17 +90,50 @@ async function setRepoVariable(
   name: string,
   value: string,
 ) {
-  await octokit.request("POST /repos/{owner}/{repo}/actions/variables", {
-    owner,
-    repo,
-    name,
-    value,
-    headers: {
-      "X-GitHub-Api-Version": "2022-11-28",
-    },
-  });
+  const headers = {
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
 
-  console.log(`✅ Repo Variable ${name} set`);
+  // Check if the variable exists
+  let exists = false;
+  try {
+    await octokit.request(
+      "GET /repos/{owner}/{repo}/actions/variables/{name}",
+      {
+        owner,
+        repo,
+        name,
+        headers,
+      },
+    );
+    exists = true;
+  } catch (err: any) {
+    if (err.status !== 404) throw err;
+  }
+
+  // Update or create based on existence
+  if (exists) {
+    await octokit.request(
+      "PATCH /repos/{owner}/{repo}/actions/variables/{name}",
+      {
+        owner,
+        repo,
+        name,
+        value,
+        headers,
+      },
+    );
+    console.log(`♻️  Repo Variable ${name} updated`);
+  } else {
+    await octokit.request("POST /repos/{owner}/{repo}/actions/variables", {
+      owner,
+      repo,
+      name,
+      value,
+      headers,
+    });
+    console.log(`✅ Repo Variable ${name} created`);
+  }
 }
 
 function parseEnvEntries() {
