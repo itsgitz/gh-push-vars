@@ -4,6 +4,9 @@ Push secrets and variables from your `.env` file to your **GitHub repository** u
 
 > I was tired of manually adding GitHub Actions secrets and variables, so I built this tool to automate the process for personal use. 😞
 
+[Secrets](./docs/img/secrets.png)
+[Variables](./docs/img/vars.png)
+
 ---
 
 ## 🚀 Features
