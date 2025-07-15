@@ -1,9 +1,9 @@
 {
-  "name": "gh-push-env",
+  "name": "gh-push-vars",
   "version": "1.0.0",
-  "description": "Push GitHub secrets and variables using Octokit",
+  "description": "Push GitHub variables and secrets using Octokit for repo-level and organization-level",
   "bin": {
-    "gh-push-env": "dist/index.js"
+    "gh-push-vars": "dist/index.js"
   },
   "keywords": [
     "github",
@@ -19,10 +19,12 @@
   "private": true,
   "scripts": {
     "build": "bun build index.ts --outdir dist --target bun",
-    "start": "bun run index.ts"
+    "start": "bun run index.ts",
+    "prepublishOnly": "bun run build"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/libsodium-wrappers": "^0.7.14"
   },
   "peerDependencies": {
     "typescript": "^5"
