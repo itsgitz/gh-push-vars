@@ -1,12 +1,16 @@
+[![npm](https://img.shields.io/npm/v/gh-push-vars)](https://www.npmjs.com/package/gh-push-vars)
+[![license](https://img.shields.io/npm/l/gh-push-vars)](https://opensource.org/licenses/MIT)
+[![bun](https://img.shields.io/badge/bun-compatible-blue)](https://bun.sh)
+
 # gh-push-vars 🔐🐙
 
 Push secrets and variables from your `.env` file to your **GitHub repository** using the GitHub REST API — without the need for GitHub CLI.
 
 > I was tired of manually adding GitHub Actions secrets and variables, so I built this tool to automate the process for personal use. 😞
 
-![Secrets Example](./docs/img/secrets.png "Secrets Example")
+![Secrets Example](https://raw.githubusercontent.com/itsgitz/gh-push-vars/master/docs/img/secrets.png "Secrets Example")
 
-![Variables Example](./docs/img/vars.png "Variables Example")
+![Variables Example](https://raw.githubusercontent.com/itsgitz/gh-push-vars/master/docs/img/vars.png "Variables Example")
 
 ---
 
