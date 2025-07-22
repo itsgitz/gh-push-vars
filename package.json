@@ -1,6 +1,14 @@
 {
   "name": "gh-push-vars",
   "version": "1.0.1",
+  "homepage": "https://github.com/itsgitz/gh-push-vars",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsgitz/gh-push-vars"
+  },
+  "bugs": {
+    "url": "https://github.com/itsgitz/gh-push-vars"
+  },
   "description": "Push GitHub variables and secrets using Octokit for repo-level and organization-level",
   "files": [
     "dist"
