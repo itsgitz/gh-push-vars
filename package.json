@@ -14,7 +14,7 @@
     "dist"
   ],
   "bin": {
-    "gh-push-vars": "dist/gh-push-vars"
+    "gh-push-vars": "dist/index.js"
   },
   "keywords": [
     "github",
