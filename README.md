@@ -1,8 +1,8 @@
+# gh-push-vars
+
 [![npm](https://img.shields.io/npm/v/gh-push-vars)](https://www.npmjs.com/package/gh-push-vars)
 [![license](https://img.shields.io/npm/l/gh-push-vars)](https://opensource.org/licenses/MIT)
 [![bun](https://img.shields.io/badge/bun-compatible-blue)](https://bun.sh)
-
-# gh-push-vars 🔐🐙
 
 Push secrets and variables from your `.env` file to your **GitHub repository** using the GitHub REST API — without the need for GitHub CLI.
 
@@ -14,18 +14,18 @@ Push secrets and variables from your `.env` file to your **GitHub repository** u
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔐 Push **repository secrets** via `GH_SECRET_<name>`
-- 📦 Push **repository variables** via `GH_VAR_<name>`
-- ✅ Automatically normalizes variable names to lowercase
-- ⚡ Built with [Octokit](https://github.com/octokit/rest.js) and [Bun](https://bun.sh/)
+- Push **repository secrets** via `GH_SECRET_<name>`
+- Push **repository variables** via `GH_VAR_<name>`
+- Automatically normalizes variable names to lowercase
+- Built with Octokit and Bun
 
-> 🔒 GitHub Actions environments (e.g. staging, production) are **not supported yet** — coming in the next phase!
+> GitHub Actions environments (e.g. staging, production) are **not supported yet** — coming in the next phase!
 
 ---
 
-## 📦 Install
+## Install
 
 ```bash
 npx gh-push-vars           # Recommended
@@ -36,7 +36,7 @@ npm install -g gh-push-vars # Optional global install
 
 ---
 
-## 🔧 Usage
+## Usage
 
 ```bash
 gh-push-vars
@@ -54,7 +54,7 @@ The script will:
 
 ---
 
-## 🧪 .env Format
+## .env Format
 
 ```bash
 # Required
@@ -75,16 +75,16 @@ GH_VAR_TIMEOUT=5000
 
 ---
 
-## ✅ Prefix Guide
+## Prefix Guide
 
-| .env Key Prefix    | Type                | Target         | Resulting GitHub Name |
-| ------------------ | ------------------- | -------------- | --------------------- |
-| `GH_SECRET_<name>` | Repository Secret   | 🔐 Repo Secret | `name` in lowercase   |
-| `GH_VAR_<name>`    | Repository Variable | 📦 Repo Var    | `name` in lowercase   |
+| .env Key Prefix    | Type                | Target      | Resulting GitHub Name |
+| ------------------ | ------------------- | ----------- | --------------------- |
+| `GH_SECRET_<name>` | Repository Secret   | Repo Secret | `name` in lowercase   |
+| `GH_VAR_<name>`    | Repository Variable | Repo Var    | `name` in lowercase   |
 
 > Example: `GH_SECRET_API_KEY` becomes GitHub secret `api_key` > `GH_VAR_DEBUG_MODE` becomes variable `debug_mode`
 
-## 🔐 Required GitHub Token Scopes
+## Required GitHub Token Scopes
 
 Your `GITHUB_TOKEN` must have the following scopes:
 
@@ -93,7 +93,7 @@ Your `GITHUB_TOKEN` must have the following scopes:
 
 These are required to manage repository-level secrets and variables via GitHub’s REST API.
 
-## 🧱 Development
+## Development
 
 ```bash
 bun install
@@ -109,7 +109,7 @@ chmod +x dist/index.js
 
 ```
 
-## 📦 Pre-publish to npm
+## Pre-publish to npm
 
 ```json
 "files": ["dist"],
@@ -123,7 +123,7 @@ chmod +x dist/index.js
 
 ```
 
-## 🛣️ Roadmap
+## Roadmap
 
 - [x] Repo secrets support
 - [x] Repo variables support
@@ -136,7 +136,7 @@ chmod +x dist/index.js
 - [ ] Config file (`gh-push-vars.json`)
 - [ ] Interactive mode
 
-## 📄 License
+## License
 
 MIT © 2025 Anggit M Ginanjar
 
