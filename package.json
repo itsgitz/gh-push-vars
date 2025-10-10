@@ -1,7 +1,7 @@
 {
   "name": "gh-push-vars",
   "version": "1.0.5",
-  "homepage": "https://www.itsgitz.my.id",
+  "homepage": "https://github.com/itsgitz/gh-push-vars",
   "repository": {
     "type": "git",
     "url": "https://github.com/itsgitz/gh-push-vars"
